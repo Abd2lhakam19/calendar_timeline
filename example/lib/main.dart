@@ -60,6 +60,8 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             CalendarTimeline(
+              dayHeight: 40,
+              monthHeight: 30,
               showYears: true,
               initialDate: _selectedDate,
               firstDate: DateTime.now(),

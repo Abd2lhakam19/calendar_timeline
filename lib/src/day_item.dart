@@ -5,7 +5,6 @@ class DayItem extends StatelessWidget {
   const DayItem({
     Key? key,
     required this.dayNumber,
-    required this.shortName,
     required this.onTap,
     this.isSelected = false,
     this.dayColor,
@@ -17,7 +16,6 @@ class DayItem extends StatelessWidget {
     this.shrink = false,
   }) : super(key: key);
   final int dayNumber;
-  final String shortName;
   final bool isSelected;
   final Function onTap;
   final Color? dayColor;
@@ -68,15 +66,6 @@ class DayItem extends StatelessWidget {
               dayNumber.toString(),
               style: isSelected ? selectedStyle : textStyle,
             ),
-            if (isSelected)
-              Text(
-                shortName,
-                style: TextStyle(
-                  color: dayNameColor ?? activeDayColor ?? Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: shrink ? 9 : 14,
-                ),
-              ),
           ],
         ),
       ),
